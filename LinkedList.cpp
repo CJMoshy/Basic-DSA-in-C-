@@ -18,7 +18,8 @@ public:
 			headptr = head;
 		}
 		else {
-			n->next = headptr;
+			n->next = head;
+			head = n;
 			headptr = n;
 		}
 	}
@@ -31,7 +32,8 @@ public:
 		}
 		else {
 			Node* tmp = new Node(x);
-			tmp->next = headptr;
+			tmp->next = head;
+			head = tmp;
 			headptr = tmp;
 		}
 	}
@@ -42,6 +44,7 @@ public:
 			std::cout << '[' << headptr->data << ']' << " --> ";
 			headptr = headptr->next;
 		}
+		headptr = head; //reset the position after traversal so it can be done again
 	 }
 
 
