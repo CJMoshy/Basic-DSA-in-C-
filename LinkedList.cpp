@@ -4,7 +4,6 @@
 
 struct LinkedList
 {	
-public:
 	//constructor
 	LinkedList() {
 		head = new Node();
@@ -48,7 +47,6 @@ public:
 	 }
 
 
-public:
 	Node* head;
 	Node* headptr;
 };
